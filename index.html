@@ -206,6 +206,7 @@ Figure&nbsp;1: Change in direct-care nurse hours per resident day, relative to m
 </figcaption>
 </figure>
 </div>
+<p><strong>Look up a nursing home.</strong> A companion app, <a href="https://nursing-home-ownership.streamlit.app/">nursing-home-ownership.streamlit.app</a>, shows any certified U.S. home’s monthly staffing by role (against the 3.48-hour benchmark and its state’s median), recorded ownership changes, star ratings and inspection record, from the same public CMS data. One home’s history is not evidence about its owner; the app explains what the data can and cannot show.</p>
 <section id="the-question" class="level2">
 <h2 class="anchored" data-anchor-id="the-question">The question</h2>
 <p>When a nursing home changes hands, does the new owner change how many nurses are on the floor? And does the answer depend on who the buyer is?</p>
@@ -668,6 +669,7 @@ Figure&nbsp;10: Share of homes at or above 3.48 total nurse hours per resident d
 <li>The pre-registered plan is at git tag <code>prereg-v1</code>; deviations are logged in <code>ANALYSIS_PLAN.md</code>.</li>
 <li>Every number in this article is read from the result files at render time (<code>nho.viz.article</code>), and the key estimates are pinned in <code>tests/test_headline_numbers.py</code>.</li>
 <li>Data sources, coverage, exclusions and known issues are documented in <code>DATA.md</code>.</li>
+<li>The <a href="https://nursing-home-ownership.streamlit.app/">lookup app</a> reads a slim extract built by <code>make app-data</code> from the same pipeline.</li>
 </ul>
 <p><em>Sources: CMS Payroll-Based Journal Daily Nurse Staffing; CMS SNF Change of Ownership, All Owners and Enrollments; Care Compare Provider Information, Health Deficiencies; HCRIS cost reports; U.S. Census ACS; BLS QCEW/OEWS; MACPAC. Private-equity firm list from the Private Equity Stakeholder Project and public filings.</em></p>
 
