@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Pospisil">
+<meta name="dcterms.date" content="2026-10-26">
+<meta name="description" content="An event study of 16,000 nursing homes’ daily payroll staffing records, 2017–2026, around changes of ownership, by type of buyer.">
+
+<title>After the Buyout</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question">The question</a></li>
+  <li><a href="#why-now" id="toc-why-now" class="nav-link" data-scroll-target="#why-now">Why now</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method">Method</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#robustness" id="toc-robustness" class="nav-link" data-scroll-target="#robustness">Robustness</a></li>
+  <li><a href="#who-is-affected-most" id="toc-who-is-affected-most" class="nav-link" data-scroll-target="#who-is-affected-most">Who is affected most</a></li>
+  <li><a href="#the-policy-angle" id="toc-the-policy-angle" class="nav-link" data-scroll-target="#the-policy-angle">The policy angle</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#reproduce-this-analysis" id="toc-reproduce-this-analysis" class="nav-link" data-scroll-target="#reproduce-this-analysis">Reproduce this analysis</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">After the Buyout</h1>
+<p class="subtitle lead">What happens to nurse staffing in U.S. nursing homes when ownership changes</p>
+</div>
+
+<div>
+  <div class="description">
+    An event study of 16,000 nursing homes’ daily payroll staffing records, 2017–2026, around changes of ownership, by type of buyer.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Pospisil </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Three findings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>After a private-equity firm bought a nursing home, nurse staffing fell by about 5%</strong>, compared with similar homes that were not sold. That is about 10 fewer minutes of hands-on nursing care per resident each day, and the gap had not closed two years after the sale.</li>
+<li><strong>The hours lost were mostly nurse aides’ and registered nurses’ hours, and weekend staffing fell too.</strong> The rise in agency (contract) staff that the raw data seemed to show is not confirmed: contract use was already rising before these sales.</li>
+<li><strong>Other buyers differ.</strong> After sales to small and independent buyers, staffing also fell, but by less than half as much (2.4%). Non-profit and government buyers made no meaningful change. For homes bought by large chains, the data can’t tell, because those homes’ staffing was already moving differently before the sale.</li>
+</ol>
+</div>
+</div>
+<div id="fig-hero" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/00_hero_event_study.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Change in direct-care nurse hours per resident day, relative to matched never-sold homes, by months since the sale. Bands are 95% uniform confidence bands; the gray zone is the pre-registered ±0.10 threshold.
+</figcaption>
+</figure>
+</div>
+<section id="the-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-question">The question</h2>
+<p>When a nursing home changes hands, does the new owner change how many nurses are on the floor? And does the answer depend on who the buyer is?</p>
+<p>This article compares five kinds of buyer: private-equity firms, real-estate investment trusts (REITs), large chains (30 or more homes), small or independent operators, and non-profit or government bodies. For each, it asks how staffing changed after the sale, compared with similar homes that were never sold over the same months.</p>
+<p>Staffing is measured in <strong>hours per resident day (HPRD)</strong>: the hours worked by registered nurses (RNs), licensed practical nurses (LPNs) and certified nurse aides (CNAs) on direct care, divided by the number of residents. Homes bought by private equity averaged about 3.25 hours per resident per day before their sale.</p>
+</section>
+<section id="why-now" class="level2">
+<h2 class="anchored" data-anchor-id="why-now">Why now</h2>
+<ul>
+<li><strong>Ownership is more visible in public data than before.</strong> Since 2022, CMS has published detailed ownership files for every Medicare-enrolled nursing home, listing each owner’s role and share and the dates of changes of ownership, and the files now include self-reported private-equity and REIT flags. Linked to daily payroll records, they make it possible to follow ownership and staffing for every home in the country.</li>
+<li><strong>The federal staffing floor is gone.</strong> In 2024 CMS set a minimum of 3.48 total nurse hours per resident day. A federal court vacated it in April 2025, Congress barred its enforcement until 2034, and CMS repealed it in an interim final rule effective February 2026 (status checked October 2026). With no federal floor, what owners choose to do with staffing matters more.</li>
+<li><strong>Private equity is a small but concentrated part of the sector.</strong> In this study’s data, about 9% of certified beds are in homes linked to a private-equity firm or a listed REIT, and a handful of firms account for most private-equity purchases.</li>
+</ul>
+<p><strong>What earlier research found.</strong> The best-known study of private-equity nursing-home purchases (Gupta, Howell, Yannelis &amp; Gupta, <em>Review of Financial Studies</em>, 2024) found that nurse staffing declined after private-equity buyouts, using data from before CMS’s daily payroll records existed. This study uses those daily records, covers 2017–2026, and compares private equity with every other kind of buyer.</p>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<div id="fig-hexmap" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hexmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/06_hexmap_pe_reit_share.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hexmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Share of nursing-home beds in homes linked to private equity or a listed REIT, by state (latest CMS ownership data). REIT links are a lower bound.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Staffing:</strong> the CMS Payroll-Based Journal (PBJ), the daily hours every nursing home must submit from its payroll and contractor records. It covers January 2017 to March 2026: about 49 million facility-days at 16,157 homes. Days that fail plausibility checks (no residents, no hours, or fewer than 1 or more than 12 hours per resident) are dropped. Missing months stay missing; they are never counted as zero.</li>
+<li><strong>Sales:</strong> the CMS Change of Ownership file, linked to the CMS All Owners and Enrollments files to identify each buyer. A curated, cited list of private-equity firms supplements CMS’s own flags, which many owners fill in inconsistently.</li>
+<li><strong>Home characteristics:</strong> monthly Care Compare snapshots (beds, star ratings, turnover), inspection citations, cost reports, and state and county context.</li>
+</ul>
+<div id="fig-network" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/04_ownership_network.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The 25 largest owner groups by beds. Each dot is a home; homes linked to two groups (often a REIT landlord and an operating chain) sit inside the ring. <a href="figures/04_ownership_network.html">Interactive version</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>How buyers were labelled.</strong> Each sale’s buyer is classed by rules applied in order: private equity (owner or controller on the cited firm list), REIT (a listed REIT that arrived with the sale), large chain, small/independent, or non-profit/government. On a fresh hand-checked sample of 30 sales, the labels were right about 73% of the time (weighted). Chain and independent labels were all correct (12 of 12) and private-equity labels mostly correct (7 of 9); REIT labels were the weakest (1 of 6). A sample this small gives only a rough guide. Transfers between related owners are not counted as sales.</p>
+<p>Most staffing differences across homes predate any sale. Weekends are one example: for-profit homes staff 8% fewer hours on weekends than on weekdays (3.06 vs 3.33), and every ownership type shows a similar dip. That is why this study compares each home with itself before and after the sale, and with similar homes over the same months.</p>
+<div id="fig-weekend" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-weekend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/07_weekend_gap_slope.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weekend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Weekday vs weekend direct-care hours per resident day, by Care Compare ownership type.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="method" class="level2">
+<h2 class="anchored" data-anchor-id="method">Method</h2>
+<p><strong>The design was registered before any outcome was estimated.</strong> The analysis plan (<code>ANALYSIS_PLAN.md</code>) was committed and tagged <code>prereg-v1</code> before any staffing model was run. It sets the hypotheses, outcomes, comparison groups, tests and the rule for calling a result “no change”. Every later change is logged in the plan with its date and reason; two checks added after seeing results are labelled <em>post-hoc</em> below.</p>
+<ul>
+<li><strong>Which sales.</strong> Changes of ownership from January 2018 to March 2025, each home’s first qualifying sale, with no other ownership change within two years either side.</li>
+<li><strong>Comparison homes.</strong> Each sold home is matched to up to five homes that were never sold, in the same state and sale month, with similar staffing levels and trends in the second year before the sale (months −24 to −13, before any sale-related changes), similar size, star rating and rural or urban location. After matching, sold and comparison homes are balanced on all of these for the four main buyer types (standardized differences of 0.08 or less).</li>
+<li><strong>Estimator.</strong> A staggered difference-in-differences event study (Callaway &amp; Sant’Anna, 2021), which compares each sold home’s staffing in each month from two years before to two years after the sale with its matched homes over the same calendar months. It avoids the known biases of a plain two-way fixed-effects regression when sales happen at different times. A second estimator (Sun &amp; Abraham, 2021) is run as a cross-check. Standard errors are clustered by home.</li>
+<li><strong>The headline number</strong> is the average change over the 25 months from the sale month to two years after.</li>
+<li><strong>Reading the results.</strong> A buyer type has an <em>effect</em> when the 95% confidence interval excludes zero. It has <em>no meaningful change</em> when the 90% interval lies inside ±0.10 hours per resident day, the threshold set in advance. A result is <em>not identified</em> when sold homes’ staffing was already diverging from their matches before the sale. The four main buyer types are tested together with a Holm correction.</li>
+</ul>
+<div id="fig-balance" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/08_love_plot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Balance before and after matching: standardized mean differences between sold homes and their comparison homes.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p><a href="#fig-hero" class="quarto-xref">Figure&nbsp;1</a>, at the top of this article, shows the month-by-month estimates for the four main buyer types.</p>
+<p><strong>Private equity.</strong> Across 257 private-equity purchases, direct-care staffing fell by 0.17 hours per resident day on average over the two years after the sale (95% CI −0.26 to −0.08; Holm-adjusted p = 0.001). That is 5.1% of the pre-sale level, about 10 minutes of nursing per resident per day. The decline grew over time, reaching −0.21 at two years. Before the sale, these homes tracked their matches closely: no pre-sale month differed by more than 0.04 hours. The cross-check estimator gives −0.16.</p>
+<p><strong>Small and independent buyers.</strong> Staffing fell by 0.08 hours per resident day (2.4%; 95% CI −0.11 to −0.05) across 2,226 sales. These homes were drifting down slightly before the sale; a check that removes that drift (post-hoc) still gives −0.08.</p>
+<p><strong>Non-profit and government buyers.</strong> No meaningful change: +0.005 (95% CI −0.05 to +0.06), across 533 sales. This null is the least robust of the results (see Robustness).</p>
+<p><strong>Large chains.</strong> Staffing fell by 0.05 hours per resident day after 941 sales, but these homes’ staffing was already moving differently from their matches before the sale (pre-trend test p = 0.048). The study therefore cannot attribute the change to the sale.</p>
+<p><strong>REITs.</strong> Only 13 sales qualify, too few to estimate anything reliably. They are reported for completeness only.</p>
+<div class="cell" data-execution_count="2">
+<div id="tbl-headline" class="cell quarto-float quarto-figure quarto-figure-left anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-headline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Direct-care nurse hours per resident day: average change over the two years after a sale, relative to matched never-sold homes.
+</figcaption>
+<div aria-describedby="tbl-headline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 5%">
+<col style="width: 19%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 16%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Buyer</th>
+<th style="text-align: right;">Sales</th>
+<th style="text-align: left;">Change, hours per resident day</th>
+<th style="text-align: left;">95% CI</th>
+<th style="text-align: left;">Change, %</th>
+<th style="text-align: left;">Pre-sale trends similar?</th>
+<th style="text-align: left;">Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Private equity</td>
+<td style="text-align: right;">257</td>
+<td style="text-align: left;">−0.166</td>
+<td style="text-align: left;">−0.26 to −0.08</td>
+<td style="text-align: left;">−5.1%</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Staffing fell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Large chain</td>
+<td style="text-align: right;">941</td>
+<td style="text-align: left;">−0.051</td>
+<td style="text-align: left;">−0.09 to −0.02</td>
+<td style="text-align: left;">−1.6%</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Can’t tell (trends differed before the sale)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Small / independent</td>
+<td style="text-align: right;">2,226</td>
+<td style="text-align: left;">−0.080</td>
+<td style="text-align: left;">−0.11 to −0.05</td>
+<td style="text-align: left;">−2.4%</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Staffing fell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Non-profit / government</td>
+<td style="text-align: right;">533</td>
+<td style="text-align: left;">+0.005</td>
+<td style="text-align: left;">−0.05 to +0.06</td>
+<td style="text-align: left;">+0.2%</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">No meaningful change</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">REIT (exploratory)</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">−0.230</td>
+<td style="text-align: left;">−0.58 to +0.12</td>
+<td style="text-align: left;">−6.8%</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Can’t tell (trends differed before the sale)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="what-changed-inside-the-home" class="level3">
+<h3 class="anchored" data-anchor-id="what-changed-inside-the-home">What changed inside the home</h3>
+<p>The private-equity decline came mainly from nurse aides (−0.108 hours per resident day) and registered nurses (−0.052, about 12% of RN hours). LPN hours showed no clear change. Weekend staffing fell by 0.135 hours per resident day, so the decline was not confined to weekdays.</p>
+<p>Before the analysis plan was written, a descriptive chart suggested that private-equity buyers turned to agency staff after a sale; the plan disclosed that. The event study does find contract share rising (+2.8 percentage points), but contract use was already rising before these sales, so the rise cannot be attributed to the buyer.</p>
+<div class="cell" data-execution_count="3">
+<div id="tbl-secondary" class="cell quarto-float quarto-figure quarto-figure-left anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-secondary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Secondary outcomes: average change over the two years after a sale (95% CI). Hours are per resident day; contract share is a fraction of direct-care hours; turnover is in percentage points, measured from 12 months after the sale. † = trends differed before the sale, so the estimate is not identified.
+</figcaption>
+<div aria-describedby="tbl-secondary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Outcome</th>
+<th style="text-align: left;">Private equity</th>
+<th style="text-align: left;">Large chain</th>
+<th style="text-align: left;">Small / independent</th>
+<th style="text-align: left;">Non-profit / government</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">RN hours</td>
+<td style="text-align: left;">−0.052 (−0.077 to −0.027)</td>
+<td style="text-align: left;">−0.025 (−0.036 to −0.013)</td>
+<td style="text-align: left;">−0.015 (−0.024 to −0.007)</td>
+<td style="text-align: left;">+0.052 (−0.004 to +0.107)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LPN hours</td>
+<td style="text-align: left;">−0.006 (−0.030 to +0.018)</td>
+<td style="text-align: left;">+0.010 (−0.005 to +0.025)</td>
+<td style="text-align: left;">−0.013 (−0.024 to −0.002)</td>
+<td style="text-align: left;">−0.024 (−0.054 to +0.005)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CNA (aide) hours</td>
+<td style="text-align: left;">−0.108 (−0.177 to −0.039)</td>
+<td style="text-align: left;">−0.037 (−0.062 to −0.012)</td>
+<td style="text-align: left;">−0.052 (−0.072 to −0.032)</td>
+<td style="text-align: left;">−0.023 (−0.060 to +0.015)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Weekend hours</td>
+<td style="text-align: left;">−0.135 (−0.214 to −0.056)</td>
+<td style="text-align: left;">−0.064 (−0.098 to −0.030)</td>
+<td style="text-align: left;">−0.080 (−0.106 to −0.053)</td>
+<td style="text-align: left;">−0.009 (−0.079 to +0.061)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Contract share</td>
+<td style="text-align: left;">+0.028 (+0.011 to +0.044) †</td>
+<td style="text-align: left;">−0.011 (−0.020 to −0.002) †</td>
+<td style="text-align: left;">−0.002 (−0.007 to +0.004) †</td>
+<td style="text-align: left;">−0.005 (−0.016 to +0.006)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nursing staff turnover (%)</td>
+<td style="text-align: left;">−4.1 (−11.4 to +3.1) †</td>
+<td style="text-align: left;">+2.2 (+0.7 to +3.7)</td>
+<td style="text-align: left;">+2.9 (+1.8 to +4.1) †</td>
+<td style="text-align: left;">+0.2 (−2.2 to +2.6) †</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div id="fig-dumbbell" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dumbbell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/02_staff_mix_dumbbell.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dumbbell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Raw staff mix 12 months before vs 12 months after a sale, by buyer type (descriptive). The gray tick shows how never-sold homes changed over the same months.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="one-home-day-by-day" class="level3">
+<h3 class="anchored" data-anchor-id="one-home-day-by-day">One home, day by day</h3>
+<div id="fig-calendar" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calendar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/05_facility_heat_calendar.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calendar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Daily direct-care hours per resident day at one anonymised home, chosen by a fixed rule as typical of private-equity purchases, not for how it looks.
+</figcaption>
+</figure>
+</div>
+<p>Daily data are noisy: staffing swings from week to week, and short pale stretches mark weeks with fewer staff hours per resident. This home’s own staffing barely moved after the sale. Its matched homes added staff over the same year, so relative to them it fell by about the private-equity average. That is what the average effect means: staffing that falls behind comparable homes, not necessarily staffing that visibly drops. The home is not named, and one home is an illustration, not evidence.</p>
+</section>
+</section>
+<section id="robustness" class="level2">
+<h2 class="anchored" data-anchor-id="robustness">Robustness</h2>
+<div id="fig-forest" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/09_robustness_forest.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: The headline estimate under each robustness check, by buyer type.
+</figcaption>
+</figure>
+</div>
+<p>The private-equity conclusion (staffing fell) held in all 18 of 18 registered checks. Across them, the estimate ranged from −0.22 to −0.10:</p>
+<ul>
+<li><strong>COVID-19.</strong> Dropping March 2020 to December 2021 gives −0.10 (95% CI −0.16 to −0.03): smaller, but still a decline.</li>
+<li><strong>Not one firm.</strong> Three firms account for most private-equity purchases in the data. Leaving each out in turn gives −0.22, −0.19, −0.11. No single firm drives the result. Firm links come from CMS ownership records and public sources (the Private Equity Stakeholder Project’s lists and filings); they are this study’s labels, not the firms’ own statements, and these numbers are not estimates of any one firm’s effect.</li>
+<li><strong>Owner-level correlation.</strong> Allowing homes with the same owner to move together widens the interval to −0.27 to −0.06.</li>
+<li><strong>Placebo sales.</strong> Assigning fake sale dates to never-sold homes 500 times never produced an estimate as large as the real one.</li>
+<li><strong>Other comparison groups</strong> (homes sold later; coarsened exact matching) and <strong>label quality</strong> (high- and medium-confidence labels only) leave the answer unchanged.</li>
+<li><strong>Pre-sale trend (post-hoc).</strong> Extending each group’s pre-sale trend and measuring the change against it gives −0.12.</li>
+<li><strong>One influential home (post-hoc).</strong> A single home, whose staffing fell sharply almost two years after its sale, carries 54% of the uncertainty in the private-equity estimate. Without it, the estimate is −0.13 (95% CI −0.19 to −0.07): smaller, but still beyond the ±0.10 threshold. Both numbers should be read together.</li>
+</ul>
+<div class="cell" data-execution_count="4">
+<div id="tbl-robust" class="cell quarto-float quarto-figure quarto-figure-left anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Private equity: the headline estimate under selected checks.
+</figcaption>
+<div aria-describedby="tbl-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 64%">
+<col style="width: 10%">
+<col style="width: 16%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Check</th>
+<th style="text-align: left;">Change</th>
+<th style="text-align: left;">95% CI</th>
+<th style="text-align: right;">Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Main estimate (reference)</td>
+<td style="text-align: left;">−0.17</td>
+<td style="text-align: left;">−0.26 to −0.08</td>
+<td style="text-align: right;">257</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drop Mar 2020 – Dec 2021</td>
+<td style="text-align: left;">−0.10</td>
+<td style="text-align: left;">−0.16 to −0.03</td>
+<td style="text-align: right;">189</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SEs clustered by owner group</td>
+<td style="text-align: left;">−0.17</td>
+<td style="text-align: left;">−0.27 to −0.06</td>
+<td style="text-align: right;">257</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Trend-adjusted (pre-sale linear trend extrapolated) (post-hoc)</td>
+<td style="text-align: left;">−0.12</td>
+<td style="text-align: left;">−0.20 to −0.03</td>
+<td style="text-align: right;">257</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PE without Portopiccolo Group</td>
+<td style="text-align: left;">−0.22</td>
+<td style="text-align: left;">−0.36 to −0.08</td>
+<td style="text-align: right;">148</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PE without Cascade Capital</td>
+<td style="text-align: left;">−0.19</td>
+<td style="text-align: left;">−0.31 to −0.06</td>
+<td style="text-align: right;">188</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PE without Tryko Partners</td>
+<td style="text-align: left;">−0.11</td>
+<td style="text-align: left;">−0.18 to −0.05</td>
+<td style="text-align: right;">221</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High + medium confidence labels only</td>
+<td style="text-align: left;">−0.17</td>
+<td style="text-align: left;">−0.26 to −0.08</td>
+<td style="text-align: right;">257</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Controls: coarsened exact matching</td>
+<td style="text-align: left;">−0.14</td>
+<td style="text-align: left;">−0.25 to −0.03</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Controls: not-yet-sold homes</td>
+<td style="text-align: left;">−0.17</td>
+<td style="text-align: left;">−0.28 to −0.07</td>
+<td style="text-align: right;">257</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Balanced window (all 49 months observed)</td>
+<td style="text-align: left;">−0.10</td>
+<td style="text-align: left;">−0.18 to −0.01</td>
+<td style="text-align: right;">107</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drop the most influential facility (post-hoc)</td>
+<td style="text-align: left;">−0.13</td>
+<td style="text-align: left;">−0.19 to −0.07</td>
+<td style="text-align: right;">256</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The other results are less sturdy. The small/independent decline holds in every check except one with a much noisier comparison group. The non-profit/government null is fragile: one alternative matching method gives −0.11. The large-chain estimate stays unidentified.</p>
+<p><strong>Power.</strong> With these sample sizes, the study has an 80% chance of detecting a change of about 0.13 hours for private equity, slightly more than the ±0.10 threshold, and smaller changes for the larger groups. For REITs, only a change above 0.50 hours, about 15%, would show up.</p>
+</section>
+<section id="who-is-affected-most" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-affected-most">Who is affected most</h2>
+<div id="fig-het" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-het-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/10_heterogeneity.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-het-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Change in direct-care hours per resident day by subgroup (exploratory). Hollow points: estimates where one home dominates the uncertainty, shown without an interval.
+</figcaption>
+</figure>
+</div>
+<p>These splits were planned as exploratory. The private-equity decline appears in every subgroup with a reliable estimate, ranging from −0.08 to −0.37 hours. It looks largest in states whose Medicaid payments cover the least of a home’s costs (−0.24), but none of the private-equity subgroup differences is statistically significant. Among large chains, the decline is concentrated in those low-payment states. Higher-rated homes lost more staff after sales to chains and independents, which may simply be regression to the mean. With 43 subgroup estimates and no correction for multiple comparisons, none of these patterns should be read as a finding.</p>
+</section>
+<section id="the-policy-angle" class="level2">
+<h2 class="anchored" data-anchor-id="the-policy-angle">The policy angle</h2>
+<div id="fig-states" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-states-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/03_state_small_multiples_348.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-states-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Share of homes at or above 3.48 total nurse hours per resident day (the repealed 2024 federal standard), private-equity-owned vs other homes, by state.
+</figcaption>
+</figure>
+</div>
+<p>The repealed federal rule would have required 3.48 total nurse hours per resident day. In 2025, 61.7% of private-equity-owned homes met that level, against 65.6% of other homes. The gap was wider in 2021–2024: in 2023, 49.5% vs 59.5%. Private-equity homes were less likely to meet it in 11 of the 16 states with enough of them to compare. These shares are descriptive: they include homes owned for years, not just recent purchases.</p>
+<p>Three points for policy:</p>
+<ul>
+<li><strong>The staffing data already show what happens after a sale.</strong> PBJ and the CMS ownership files are public. A regulator, state agency or reporter can watch a home’s staffing after a change of ownership month by month, with no new reporting.</li>
+<li><strong>With the federal floor repealed, state rules are the remaining levers.</strong> Where states set staffing minimums or review changes of ownership, these results suggest staffing after a sale is worth checking.</li>
+<li><strong>Better ownership data would help.</strong> CMS’s private-equity flag is self-reported and identifies only a fraction of private-equity-linked homes in this study. Labelling buyers took name-matching against outside sources.</li>
+</ul>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li><strong>This is about staffing, not outcomes for residents.</strong> The study makes no claim about deaths, injuries or harm. Inspection citations were analysed, but most estimates were not identified, and citations measure what inspectors find, which depends on when and how often they look.</li>
+<li><strong>Sales are not random.</strong> Matching and the event-study design compare homes that looked alike before the sale, but a buyer may choose homes that were about to change anyway in ways the data do not capture.</li>
+<li><strong>Some sales are missing.</strong> CMS’s change-of-ownership file keeps only each home’s latest sale. If any “never-sold” comparison homes were in fact sold, the estimates are biased toward zero.</li>
+<li><strong>Hours, not care.</strong> Hours per resident day count staff time, not its skill, continuity or how it is spent.</li>
+<li><strong>Buyer labels are imperfect</strong> (about 73% correct on a hand-checked sample; REIT labels weakest). Mislabelling tends to blur differences between buyer types rather than creating them.</li>
+<li><strong>Private-equity purchases are concentrated</strong> in a few firms and in sales from 2018–2023. The results describe these purchases, not every possible private-equity owner.</li>
+<li><strong>These are averages.</strong> They do not show that any particular owner, firm or home cut staffing, and staffing below a benchmark is not by itself evidence of poor care.</li>
+<li><strong>PBJ is payroll-based but self-submitted.</strong> CMS audits it, but errors and late corrections remain; days that fail plausibility checks were dropped.</li>
+<li><strong>COVID-19</strong> hit staffing hard in 2020–2021. The private-equity result holds without those months but is smaller.</li>
+</ul>
+</section>
+<section id="reproduce-this-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="reproduce-this-analysis">Reproduce this analysis</h2>
+<p>All code, the analysis plan and its change log are in the project repository, which is private for now; the code is available from the author on request. From a clean clone (a full run took about 85 minutes on a laptop in October 2026):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                      <span class="co"># Python environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> .env.example .env         <span class="co"># add free Census and BLS API keys</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># manual: BLS OEWS 'All data' zips (2017-2025) into data/raw/oews/ (bls.gov blocks scripts)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> data                    <span class="co"># download CMS, Census, BLS sources (~1 hour, 7.5 GB)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> panel                   <span class="co"># build facility-day/month panels and ownership labels</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> models                  <span class="co"># matching, event study, robustness, heterogeneity (~30 min)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> report                  <span class="co"># figures and this article</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> test                    <span class="co"># schema, range and pinned-headline-number tests</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The pre-registered plan is at git tag <code>prereg-v1</code>; deviations are logged in <code>ANALYSIS_PLAN.md</code>.</li>
+<li>Every number in this article is read from the result files at render time (<code>nho.viz.article</code>), and the key estimates are pinned in <code>tests/test_headline_numbers.py</code>.</li>
+<li>Data sources, coverage, exclusions and known issues are documented in <code>DATA.md</code>.</li>
+</ul>
+<p><em>Sources: CMS Payroll-Based Journal Daily Nurse Staffing; CMS SNF Change of Ownership, All Owners and Enrollments; Care Compare Provider Information, Health Deficiencies; HCRIS cost reports; U.S. Census ACS; BLS QCEW/OEWS; MACPAC. Private-equity firm list from the Private Equity Stakeholder Project and public filings.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
