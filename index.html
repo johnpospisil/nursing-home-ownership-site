@@ -133,6 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   <li><a href="#robustness" id="toc-robustness" class="nav-link" data-scroll-target="#robustness">Robustness</a></li>
   <li><a href="#who-is-affected-most" id="toc-who-is-affected-most" class="nav-link" data-scroll-target="#who-is-affected-most">Who is affected most</a></li>
+  <li><a href="#where-the-money-goes-exploratory" id="toc-where-the-money-goes-exploratory" class="nav-link" data-scroll-target="#where-the-money-goes-exploratory">Where the money goes (exploratory)</a></li>
   <li><a href="#the-policy-angle" id="toc-the-policy-angle" class="nav-link" data-scroll-target="#the-policy-angle">The policy angle</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
   <li><a href="#reproduce-this-analysis" id="toc-reproduce-this-analysis" class="nav-link" data-scroll-target="#reproduce-this-analysis">Reproduce this analysis</a></li>
@@ -298,7 +299,7 @@ Figure&nbsp;5: Balance before and after matching: standardized mean differences 
 Table&nbsp;1: Direct-care nurse hours per resident day: average change over the two years after a sale, relative to matched never-sold homes.
 </figcaption>
 <div aria-describedby="tbl-headline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="10">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
@@ -384,7 +385,7 @@ Table&nbsp;1: Direct-care nurse hours per resident day: average change over the 
 Table&nbsp;2: Secondary outcomes: average change over the two years after a sale (95% CI). Hours are per resident day; contract share is a fraction of direct-care hours; turnover is in percentage points, measured from 12 months after the sale. † = trends differed before the sale, so the estimate is not identified.
 </figcaption>
 <div aria-describedby="tbl-secondary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="11">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 19%">
@@ -507,7 +508,7 @@ Figure&nbsp;8: The headline estimate under each robustness check, by buyer type.
 Table&nbsp;3: Private equity: the headline estimate under selected checks.
 </figcaption>
 <div aria-describedby="tbl-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="12">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 64%">
@@ -620,6 +621,28 @@ Figure&nbsp;9: Change in direct-care hours per resident day by subgroup (explora
 </div>
 <p>These splits were planned as exploratory. The private-equity decline appears in every subgroup with a reliable estimate, ranging from −0.08 to −0.37 hours. It looks largest in states whose Medicaid payments cover the least of a home’s costs (−0.24), but none of the private-equity subgroup differences is statistically significant. Among large chains, the decline is concentrated in those low-payment states. Higher-rated homes lost more staff after sales to chains and independents, which may simply be regression to the mean. With 43 subgroup estimates and no correction for multiple comparisons, none of these patterns should be read as a finding.</p>
 </section>
+<section id="where-the-money-goes-exploratory" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-money-goes-exploratory">Where the money goes (exploratory)</h2>
+<p>Medicare cost reports list costs that a home pays to companies related to its owners, on a schedule called Worksheet A-8-1. Examples are rent to a property company the owners also control, management or home-office fees to an affiliated operator, and therapy or supplies bought from an affiliate. These payments are legal and common: about four in five homes report some. This analysis was added after the main study and was not pre-registered. It uses the same matched comparison homes and the same estimator, with half-year periods, because cost reports are annual.</p>
+<div id="fig-rp" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/11_related_party_event_study.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Change in related-party and capital-related costs after a sale, relative to matched never-sold homes (exploratory). Dashed lines: the pre-sale trends differed, so those estimates are not identified.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>After private-equity purchases, related-party costs roughly doubled.</strong> Before the sale they were 9.5% of total costs. Afterwards they averaged 9.6 percentage points higher than at comparison homes (95% CI +7.7 to +11.5), and 13.4 points higher two years out. In dollars, that is $29 more per resident day (95% CI +$24 to +$35), on top of $29 before the sale. Sold and comparison homes moved together before the sale (256 private-equity sales).</li>
+<li><strong>Most of the increase was property costs</strong> (6.4 points), such as rent to an affiliated landlord. That component’s formal pre-trend test failed, although its pre-sale estimates were close to zero. Management and home-office fees showed no clear change (−0.2 to +0.5 points).</li>
+<li><strong>Not just relabelling.</strong> If a buyer puts the building into a separate company it also owns, the home’s own property costs become rent paid to an affiliate. That alone would raise related-party costs without raising spending. But capital-related costs paid to anyone (rent, depreciation and interest) also rose: by 3.9 points from 8.3% of total costs (95% CI +3.0 to +4.8), or $10 per resident day.</li>
+<li><strong>The result does not rest on one firm.</strong> Leaving out each of the three largest private-equity firms in turn, or the single most influential home, the related-party increase stays between 7.2 and 11.1 points.</li>
+<li><strong>Other buyers.</strong> Related-party costs also rose after sales to large chains (1.5 points) and small or independent buyers (2.1), but in both cases the pre-sale trends differed, so those estimates are not identified. REIT purchases are too few to read, and rent paid to an unrelated REIT landlord does not appear as a related-party cost at all (only in capital-related costs).</li>
+</ul>
+<p>What this does not show: that these payments are improper, or that they caused the staffing decline. Cost reports are self-reported. Related-party amounts are what the home booked, not necessarily what the affiliate earned. The study cannot follow money beyond the home’s own books.</p>
+</section>
 <section id="the-policy-angle" class="level2">
 <h2 class="anchored" data-anchor-id="the-policy-angle">The policy angle</h2>
 <div id="fig-states" class="quarto-float quarto-figure quarto-figure-left anchored">
@@ -628,7 +651,7 @@ Figure&nbsp;9: Change in direct-care hours per resident day by subgroup (explora
 <img src="figures/03_state_small_multiples_348.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-states-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Share of homes at or above 3.48 total nurse hours per resident day (the repealed 2024 federal standard), private-equity-owned vs other homes, by state.
+Figure&nbsp;11: Share of homes at or above 3.48 total nurse hours per resident day (the repealed 2024 federal standard), private-equity-owned vs other homes, by state.
 </figcaption>
 </figure>
 </div>
